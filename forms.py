@@ -16,3 +16,30 @@ class signUpForm(FlaskForm):
     email = StringField("Email address: ", validators=[DataRequired()])
     password = PasswordField("Password: ", validators=[DataRequired()])
     repeat_password = PasswordField("Repeat your password: ", validators=[DataRequired()])
+    submit = SubmitField("Submit")
+
+
+class createRecipeForm(FlaskForm):
+    recipe_name = StringField("Recipe name: ", validators=[DataRequired()])
+    description = StringField("A short description: ",)
+    cook_time = StringField("Cooking time: ", validators=[DataRequired()])
+    prep_time = StringField("Preparation time: ", validators=[DataRequired()])
+    serves = StringField("How many does it serve?", validators=[DataRequired()])
+    ingredients = TextAreaField("One ingredient per line", validators=[DataRequired()])
+    method = TextAreaField("1. Start by...", validators=[DataRequired()])
+    submit = SubmitField("Submit")
+
+
+class editRecipeForm(FlaskForm):
+    recipe_name = StringField("Recipe name: ", validators=[DataRequired()])
+    description = StringField("A short description: ",)
+    cook_time = StringField("Cooking time: ", validators=[DataRequired()])
+    prep_time = StringField("Preparation time: ", validators=[DataRequired()])
+    serves = StringField("How many does it serve?", validators=[DataRequired()])
+    ingredients = TextAreaField("One ingredient per line", validators=[DataRequired()])
+    method = TextAreaField("1. Start by...", validators=[DataRequired()])
+    submit = SubmitField("Submit")
+
+
+class deleteRecipeForm(FlaskForm):
+    submit = SubmitField("Delete recipe")
