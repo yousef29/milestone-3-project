@@ -13,7 +13,7 @@ class signUpForm(FlaskForm):
     first_name = StringField("First name: ", validators=[DataRequired()])
     last_name = StringField("Last name: ", validators=[DataRequired()])
     username = StringField("Username: ", validators=[DataRequired()])
-    email = StringField("Email address: ", validators=[DataRequired()])
+    email = StringField("Email address: ", validators=[Email()])
     password = PasswordField("Password: ", validators=[DataRequired()])
     repeat_password = PasswordField("Repeat your password: ", validators=[DataRequired()])
     submit = SubmitField("Submit")
